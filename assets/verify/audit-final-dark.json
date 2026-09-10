@@ -1,47 +1,458 @@
 {
  "mode": "dark",
- "bodyFg": "#e8e6dc",
- "bodyBg": "#1a1b17",
+ "bodyFg": "rgb(232, 230, 220)",
+ "bodyBg": "rgb(26, 27, 23)",
  "bodyContrast": 13.84,
  "bodyFont": "Charter",
- "tokens": {
-  "--dsw-alias-label-primary": "#e8e6dc",
-  "--dsw-alias-label-secondary": "#bdb9ab",
-  "--dsw-alias-label-tertiary": "#a5a294",
-  "--dsw-alias-label-caption": "#9c998b",
-  "--dsw-alias-bg-base": "#1a1b17",
-  "--dsw-alias-bg-layer-2": "#21221d",
-  "--dsw-alias-border-l1": "#292a25",
-  "--dsw-alias-brand-primary": "#8fb1e0",
-  "--dsw-static-neutral-bluish-150": "#ecebe1",
-  "--dsw-static-neutral-bluish-900": "#1e1f1b",
-  "--dsw-static-deepseek-500": "#8fb1e0"
- },
+ "textNodesChecked": 34,
  "offenderCount": 0,
  "offenders": [],
- "gradientTextCount": 1,
- "gradientText": [
-  {
-   "text": "深度求索中...",
-   "cls": "EvIC1a_turnStatus",
-   "bg": "#1a1b17",
-   "stopContrasts": [
-    7.86,
-    7.86,
-    15.65,
-    7.86,
-    7.86
-   ],
-   "minStop": 7.86,
-   "stops": [
-    "#8fb1e0",
-    "#8fb1e0",
-    "#eef4fc",
-    "#8fb1e0",
-    "#8fb1e0"
-   ]
-  }
- ],
- "captured_at": "dark-mode-final",
- "verified_on": "0.1.2-alpha.5 + re-verified on 0.1.5-rc.1 (2026-09-10), all surfaces incl. better-sidebar panel"
+ "gradientTextCount": 0,
+ "gradientText": [],
+ "kamiStyleBytes": 28054,
+ "stateLayer": {
+  "canvas": "#1a1b17",
+  "tokens": {
+   "--kami-ink": "#8fb1e0",
+   "--kami-ink-strong": "#a7c3e8",
+   "--kami-live": "#8fc3b9",
+   "--kami-live-rail": "#6fa89d",
+   "--kami-sage": "#9cbb7c",
+   "--kami-brass": "#dcab6b",
+   "--kami-clay": "#e1916f",
+   "--kami-ink-tint": "#243546",
+   "--kami-ink-tint-deep": "#2c4055",
+   "--kami-ink-ring": "#46689a",
+   "--kami-ink-ring-strong": "#7ea6da",
+   "--kami-hover-ring": "#3a3b33",
+   "--kami-live-tint": "#1f2b28",
+   "--kami-live-ring": "#4d6b64",
+   "--kami-live-halo": "rgba(143,195,185,.22)",
+   "--kami-chip-fill": "#242520",
+   "--kami-chip-fill-hover": "#2b2c26",
+   "--kami-chip-ring": "#34352d",
+   "--kami-send-idle": "#3a6ea8",
+   "--kami-send-idle-hover": "#4a7eba",
+   "--kami-send-glyph": "#f5f2e8",
+   "--kami-send-lift": "0 1px 2px rgba(0,0,0,.45)",
+   "--kami-send-off-fill": "#212220",
+   "--kami-send-off-ring": "#3a3b33",
+   "--kami-send-off-glyph": "#787568"
+  },
+  "ordering": {
+   "idle fill vs canvas (want >=3)": 3.28,
+   "idle glyph vs fill (want >=4.5)": 4.72,
+   "running glyph vs fill (want >=4.5)": 7.44,
+   "disabled glyph vs canvas (want < running glyph vs canvas)": 3.75,
+   "running glyph vs canvas": 8.8
+  },
+  "checks": [
+   {
+    "pair": "idle: glyph on fill (icon+label, 4.5 target)",
+    "fg": "#f5f2e8",
+    "bg": "#3a6ea8",
+    "ratio": 4.72,
+    "floor": 4.5,
+    "pass": true
+   },
+   {
+    "pair": "idle: fill vs canvas (identifiable as active)",
+    "fg": "#3a6ea8",
+    "bg": "#1a1b17",
+    "ratio": 3.28,
+    "floor": 3,
+    "pass": true
+   },
+   {
+    "pair": "idle: fill vs composer surface",
+    "fg": "#3a6ea8",
+    "bg": "#21221d",
+    "ratio": 3.03,
+    "floor": 3,
+    "pass": true
+   },
+   {
+    "pair": "idle hover: glyph on fill (icon, 1.4.11 3:1)",
+    "fg": "#f5f2e8",
+    "bg": "#4a7eba",
+    "ratio": 3.76,
+    "floor": 3,
+    "pass": true
+   },
+   {
+    "pair": "idle hover: fill step from idle",
+    "fg": "#4a7eba",
+    "bg": "#3a6ea8",
+    "ratio": 1.25,
+    "floor": 1.05,
+    "pass": true
+   },
+   {
+    "pair": "running: glyph on fill (4.5 target)",
+    "fg": "#8fc3b9",
+    "bg": "#1f2b28",
+    "ratio": 7.44,
+    "floor": 4.5,
+    "pass": true
+   },
+   {
+    "pair": "running: fill vs canvas",
+    "fg": "#1f2b28",
+    "bg": "#1a1b17",
+    "ratio": 1.18,
+    "floor": 1.05,
+    "pass": true
+   },
+   {
+    "pair": "running: ring vs canvas (state legible)",
+    "fg": "#4d6b64",
+    "bg": "#1a1b17",
+    "ratio": 2.97,
+    "floor": 1.5,
+    "pass": true
+   },
+   {
+    "pair": "running: glyph vs canvas (non-text 3:1)",
+    "fg": "#8fc3b9",
+    "bg": "#1a1b17",
+    "ratio": 8.8,
+    "floor": 3,
+    "pass": true
+   },
+   {
+    "pair": "running: ring vs own fill",
+    "fg": "#4d6b64",
+    "bg": "#1f2b28",
+    "ratio": 2.51,
+    "floor": 1.3,
+    "pass": true
+   },
+   {
+    "pair": "disabled: glyph vs canvas (exempt, must be weakest)",
+    "fg": "#787568",
+    "bg": "#1a1b17",
+    "ratio": 3.75,
+    "floor": 0,
+    "pass": true
+   },
+   {
+    "pair": "disabled: ring vs canvas",
+    "fg": "#3a3b33",
+    "bg": "#1a1b17",
+    "ratio": 1.53,
+    "floor": 1.2,
+    "pass": true
+   },
+   {
+    "pair": "disabled: fill is hollow, glyph carries state",
+    "fg": "#787568",
+    "bg": "#212220",
+    "ratio": 3.46,
+    "floor": 0,
+    "pass": true
+   },
+   {
+    "pair": "preset chip: ink icon on chip fill",
+    "fg": "#8fb1e0",
+    "bg": "#242520",
+    "ratio": 7.01,
+    "floor": 4.5,
+    "pass": true
+   },
+   {
+    "pair": "preset chip: ring vs fill",
+    "fg": "#34352d",
+    "bg": "#242520",
+    "ratio": 1.24,
+    "floor": 1.1,
+    "pass": true
+   },
+   {
+    "pair": "preset OPEN: ink label on active fill (AA text)",
+    "fg": "#8fb1e0",
+    "bg": "#243546",
+    "ratio": 5.7,
+    "floor": 4.5,
+    "pass": true
+   },
+   {
+    "pair": "preset OPEN: ink ring vs active fill",
+    "fg": "#7ea6da",
+    "bg": "#243546",
+    "ratio": 4.99,
+    "floor": 3,
+    "pass": true
+   },
+   {
+    "pair": "preset OPEN: active fill step from collapsed chip",
+    "fg": "#243546",
+    "bg": "#242520",
+    "ratio": 1.23,
+    "floor": 1.02,
+    "pass": true
+   },
+   {
+    "pair": "preset OPEN hover: fill step",
+    "fg": "#2c4055",
+    "bg": "#243546",
+    "ratio": 1.18,
+    "floor": 1.03,
+    "pass": true
+   },
+   {
+    "pair": "selected item: text on selected fill",
+    "fg": "#a7c3e8",
+    "bg": "#243546",
+    "ratio": 6.94,
+    "floor": 4.5,
+    "pass": true
+   },
+   {
+    "pair": "selected item: ring vs selected fill",
+    "fg": "#46689a",
+    "bg": "#243546",
+    "ratio": 2.22,
+    "floor": 1.6,
+    "pass": true
+   },
+   {
+    "pair": "selected card: strong ring vs canvas",
+    "fg": "#7ea6da",
+    "bg": "#1a1b17",
+    "ratio": 6.89,
+    "floor": 3,
+    "pass": true
+   },
+   {
+    "pair": "running marker rail vs canvas",
+    "fg": "#6fa89d",
+    "bg": "#1a1b17",
+    "ratio": 6.4,
+    "floor": 2,
+    "pass": true
+   },
+   {
+    "pair": "role hue sage vs canvas",
+    "fg": "#9cbb7c",
+    "bg": "#1a1b17",
+    "ratio": 8.09,
+    "floor": 4.5,
+    "pass": true
+   },
+   {
+    "pair": "role hue brass vs canvas",
+    "fg": "#dcab6b",
+    "bg": "#1a1b17",
+    "ratio": 8.31,
+    "floor": 4.5,
+    "pass": true
+   },
+   {
+    "pair": "role hue clay vs canvas",
+    "fg": "#e1916f",
+    "bg": "#1a1b17",
+    "ratio": 6.99,
+    "floor": 4.5,
+    "pass": true
+   }
+  ],
+  "failures": []
+ },
+ "regressionProof": {
+  "tokensTotal": 134,
+  "tokensChanged": 45,
+  "textColourTokensChangedInValue": [
+   {
+    "token": "--dsw-alias-state-success-primary",
+    "before": "#9cb97c",
+    "after": "#9cbb7c",
+    "contrastBefore": 7.95,
+    "contrastAfter": 8.09,
+    "delta": 0.14,
+    "regression": false
+   }
+  ],
+  "aliasedToIdenticalValue": [
+   "--dsw-alias-label-error",
+   "--dsw-alias-state-error-primary",
+   "--dsw-alias-state-warn-label",
+   "--dsw-alias-state-warn-primary",
+   "--dsw-alias-state-warning-primary"
+  ],
+  "surfaceTokensChanged": [
+   {
+    "token": "--dsw-alias-bg-multi-select",
+    "before": "#20211c",
+    "after": "#22303f"
+   },
+   {
+    "token": "--dsw-alias-button-ghost-active-border",
+    "before": "#44453d",
+    "after": "#41608c"
+   },
+   {
+    "token": "--dsw-alias-button-ghost-active-fill",
+    "before": "#26303f",
+    "after": "#243546"
+   },
+   {
+    "token": "--dsw-alias-button-ghost-active-hover",
+    "before": "#2a3a4d",
+    "after": "#2f4459"
+   },
+   {
+    "token": "--dsw-alias-interactive-bg-active",
+    "before": "rgba(143,177,224,.16)",
+    "after": "rgba(143,177,224,.2)"
+   },
+   {
+    "token": "--dsw-alias-markdown-citation",
+    "before": "#26303f",
+    "after": "#28394d"
+   },
+   {
+    "token": "--dsw-alias-state-business-tertiary",
+    "before": "#26303f",
+    "after": "#243546"
+   },
+   {
+    "token": "--dsw-alias-state-success-tertiary",
+    "before": "#262e1e",
+    "after": "#232c1a"
+   },
+   {
+    "token": "--dsw-alias-state-warn-tertiary",
+    "before": "#3a2e20",
+    "after": "#3a2b17"
+   },
+   {
+    "token": "--dsw-specific-bubble-highlight",
+    "before": "#26344a",
+    "after": "#2c4055"
+   },
+   {
+    "token": "--dsw-specific-bubble",
+    "before": "#20293a",
+    "after": "#22303f"
+   },
+   {
+    "token": "--dsw-specific-sidebar-nav-item-active-accent",
+    "before": "#26344a",
+    "after": "#41608c"
+   },
+   {
+    "token": "--dsw-specific-sidebar-nav-item-active",
+    "before": "#20293a",
+    "after": "#243546"
+   },
+   {
+    "token": "--dsw-specific-sidebar-nav-item-hover",
+    "before": "rgba(143,177,224,.08)",
+    "after": "rgba(143,177,224,.11)"
+   },
+   {
+    "token": "--kami-ink",
+    "after": "#8fb1e0"
+   },
+   {
+    "token": "--kami-ink-strong",
+    "after": "#a7c3e8"
+   },
+   {
+    "token": "--kami-live",
+    "after": "#8fc3b9"
+   },
+   {
+    "token": "--kami-live-rail",
+    "after": "#6fa89d"
+   },
+   {
+    "token": "--kami-sage",
+    "after": "#9cbb7c"
+   },
+   {
+    "token": "--kami-brass",
+    "after": "#dcab6b"
+   },
+   {
+    "token": "--kami-clay",
+    "after": "#e1916f"
+   },
+   {
+    "token": "--kami-ink-tint",
+    "after": "#243546"
+   },
+   {
+    "token": "--kami-ink-tint-deep",
+    "after": "#2c4055"
+   },
+   {
+    "token": "--kami-ink-ring",
+    "after": "#46689a"
+   },
+   {
+    "token": "--kami-ink-ring-strong",
+    "after": "#7ea6da"
+   },
+   {
+    "token": "--kami-hover-ring",
+    "after": "#3a3b33"
+   },
+   {
+    "token": "--kami-live-tint",
+    "after": "#1f2b28"
+   },
+   {
+    "token": "--kami-live-ring",
+    "after": "#4d6b64"
+   },
+   {
+    "token": "--kami-live-halo",
+    "after": "rgba(143,195,185,.22)"
+   },
+   {
+    "token": "--kami-chip-fill",
+    "after": "#242520"
+   },
+   {
+    "token": "--kami-chip-fill-hover",
+    "after": "#2b2c26"
+   },
+   {
+    "token": "--kami-chip-ring",
+    "after": "#34352d"
+   },
+   {
+    "token": "--kami-send-idle",
+    "after": "#3a6ea8"
+   },
+   {
+    "token": "--kami-send-idle-hover",
+    "after": "#4a7eba"
+   },
+   {
+    "token": "--kami-send-glyph",
+    "after": "#f5f2e8"
+   },
+   {
+    "token": "--kami-send-lift",
+    "after": "0 1px 2px rgba(0,0,0,.45)"
+   },
+   {
+    "token": "--kami-send-off-fill",
+    "after": "#212220"
+   },
+   {
+    "token": "--kami-send-off-ring",
+    "after": "#3a3b33"
+   },
+   {
+    "token": "--kami-send-off-glyph",
+    "after": "#787568"
+   }
+  ],
+  "verdict": "PASS — every text-colouring token that moved gained contrast against its canvas"
+ },
+ "captured_at": "2026-09-10 15:22",
+ "verified_on": "dsh 0.1.5-rc.1"
 }

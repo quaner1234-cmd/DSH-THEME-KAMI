@@ -1,16 +1,7 @@
 {
- "mode": "light",
- "bodyFg": "rgb(20, 20, 19)",
- "bodyBg": "rgb(245, 244, 237)",
- "bodyContrast": 16.72,
- "bodyFont": "Charter",
- "textNodesChecked": 34,
- "offenderCount": 0,
- "offenders": [],
- "gradientTextCount": 0,
- "gradientText": [],
- "kamiStyleBytes": 28054,
- "stateLayer": {
+ "note": "State-identification round: --kami-* tokens and the contrast pair each one exists to satisfy. Floors follow WCAG 2.1: 4.5:1 text, 3:1 large text and graphical objects (1.4.11), 1.4.3-exempt disabled controls are listed with a 0 floor but must remain the weakest of the three send states.",
+ "verified_on": "dsh 0.1.5-rc.1",
+ "light": {
   "canvas": "#f5f4ed",
   "tokens": {
    "--kami-ink": "#1B365D",
@@ -258,122 +249,252 @@
   ],
   "failures": []
  },
- "regressionProof": {
-  "tokensTotal": 132,
-  "tokensChanged": 31,
-  "textColourTokensChangedInValue": [],
-  "aliasedToIdenticalValue": [
-   "--dsw-alias-label-error",
-   "--dsw-alias-state-error-primary",
-   "--dsw-alias-state-success-primary",
-   "--dsw-alias-state-warn-label",
-   "--dsw-alias-state-warn-primary",
-   "--dsw-alias-state-warning-primary"
-  ],
-  "surfaceTokensChanged": [
+ "dark": {
+  "canvas": "#1a1b17",
+  "tokens": {
+   "--kami-ink": "#8fb1e0",
+   "--kami-ink-strong": "#a7c3e8",
+   "--kami-live": "#8fc3b9",
+   "--kami-live-rail": "#6fa89d",
+   "--kami-sage": "#9cbb7c",
+   "--kami-brass": "#dcab6b",
+   "--kami-clay": "#e1916f",
+   "--kami-ink-tint": "#243546",
+   "--kami-ink-tint-deep": "#2c4055",
+   "--kami-ink-ring": "#46689a",
+   "--kami-ink-ring-strong": "#7ea6da",
+   "--kami-hover-ring": "#3a3b33",
+   "--kami-live-tint": "#1f2b28",
+   "--kami-live-ring": "#4d6b64",
+   "--kami-live-halo": "rgba(143,195,185,.22)",
+   "--kami-chip-fill": "#242520",
+   "--kami-chip-fill-hover": "#2b2c26",
+   "--kami-chip-ring": "#34352d",
+   "--kami-send-idle": "#3a6ea8",
+   "--kami-send-idle-hover": "#4a7eba",
+   "--kami-send-glyph": "#f5f2e8",
+   "--kami-send-lift": "0 1px 2px rgba(0,0,0,.45)",
+   "--kami-send-off-fill": "#212220",
+   "--kami-send-off-ring": "#3a3b33",
+   "--kami-send-off-glyph": "#787568"
+  },
+  "ordering": {
+   "idle fill vs canvas (want >=3)": 3.28,
+   "idle glyph vs fill (want >=4.5)": 4.72,
+   "running glyph vs fill (want >=4.5)": 7.44,
+   "disabled glyph vs canvas (want < running glyph vs canvas)": 3.75,
+   "running glyph vs canvas": 8.8
+  },
+  "checks": [
    {
-    "token": "--kami-ink",
-    "after": "#1B365D"
+    "pair": "idle: glyph on fill (icon+label, 4.5 target)",
+    "fg": "#f5f2e8",
+    "bg": "#3a6ea8",
+    "ratio": 4.72,
+    "floor": 4.5,
+    "pass": true
    },
    {
-    "token": "--kami-ink-strong",
-    "after": "#12283f"
+    "pair": "idle: fill vs canvas (identifiable as active)",
+    "fg": "#3a6ea8",
+    "bg": "#1a1b17",
+    "ratio": 3.28,
+    "floor": 3,
+    "pass": true
    },
    {
-    "token": "--kami-live",
-    "after": "#2f5b54"
+    "pair": "idle: fill vs composer surface",
+    "fg": "#3a6ea8",
+    "bg": "#21221d",
+    "ratio": 3.03,
+    "floor": 3,
+    "pass": true
    },
    {
-    "token": "--kami-live-rail",
-    "after": "#6f9a92"
+    "pair": "idle hover: glyph on fill (icon, 1.4.11 3:1)",
+    "fg": "#f5f2e8",
+    "bg": "#4a7eba",
+    "ratio": 3.76,
+    "floor": 3,
+    "pass": true
    },
    {
-    "token": "--kami-sage",
-    "after": "#4c6432"
+    "pair": "idle hover: fill step from idle",
+    "fg": "#4a7eba",
+    "bg": "#3a6ea8",
+    "ratio": 1.25,
+    "floor": 1.05,
+    "pass": true
    },
    {
-    "token": "--kami-brass",
-    "after": "#8b4513"
+    "pair": "running: glyph on fill (4.5 target)",
+    "fg": "#8fc3b9",
+    "bg": "#1f2b28",
+    "ratio": 7.44,
+    "floor": 4.5,
+    "pass": true
    },
    {
-    "token": "--kami-clay",
-    "after": "#b3402e"
+    "pair": "running: fill vs canvas",
+    "fg": "#1f2b28",
+    "bg": "#1a1b17",
+    "ratio": 1.18,
+    "floor": 1.05,
+    "pass": true
    },
    {
-    "token": "--kami-ink-tint",
-    "after": "#e4ecf6"
+    "pair": "running: ring vs canvas (state legible)",
+    "fg": "#4d6b64",
+    "bg": "#1a1b17",
+    "ratio": 2.97,
+    "floor": 1.5,
+    "pass": true
    },
    {
-    "token": "--kami-ink-tint-deep",
-    "after": "#d6e3f2"
+    "pair": "running: glyph vs canvas (non-text 3:1)",
+    "fg": "#8fc3b9",
+    "bg": "#1a1b17",
+    "ratio": 8.8,
+    "floor": 3,
+    "pass": true
    },
    {
-    "token": "--kami-ink-ring",
-    "after": "#7d99bd"
+    "pair": "running: ring vs own fill",
+    "fg": "#4d6b64",
+    "bg": "#1f2b28",
+    "ratio": 2.51,
+    "floor": 1.3,
+    "pass": true
    },
    {
-    "token": "--kami-ink-ring-strong",
-    "after": "#1B365D"
+    "pair": "disabled: glyph vs canvas (exempt, must be weakest)",
+    "fg": "#787568",
+    "bg": "#1a1b17",
+    "ratio": 3.75,
+    "floor": 0,
+    "pass": true
    },
    {
-    "token": "--kami-hover-ring",
-    "after": "#dedbcd"
+    "pair": "disabled: ring vs canvas",
+    "fg": "#3a3b33",
+    "bg": "#1a1b17",
+    "ratio": 1.53,
+    "floor": 1.2,
+    "pass": true
    },
    {
-    "token": "--kami-live-tint",
-    "after": "#e6edea"
+    "pair": "disabled: fill is hollow, glyph carries state",
+    "fg": "#787568",
+    "bg": "#212220",
+    "ratio": 3.46,
+    "floor": 0,
+    "pass": true
    },
    {
-    "token": "--kami-live-ring",
-    "after": "#a8c2bc"
+    "pair": "preset chip: ink icon on chip fill",
+    "fg": "#8fb1e0",
+    "bg": "#242520",
+    "ratio": 7.01,
+    "floor": 4.5,
+    "pass": true
    },
    {
-    "token": "--kami-live-halo",
-    "after": "rgba(47,91,84,.24)"
+    "pair": "preset chip: ring vs fill",
+    "fg": "#34352d",
+    "bg": "#242520",
+    "ratio": 1.24,
+    "floor": 1.1,
+    "pass": true
    },
    {
-    "token": "--kami-chip-fill",
-    "after": "#eae8dd"
+    "pair": "preset OPEN: ink label on active fill (AA text)",
+    "fg": "#8fb1e0",
+    "bg": "#243546",
+    "ratio": 5.7,
+    "floor": 4.5,
+    "pass": true
    },
    {
-    "token": "--kami-chip-fill-hover",
-    "after": "#e3e1d4"
+    "pair": "preset OPEN: ink ring vs active fill",
+    "fg": "#7ea6da",
+    "bg": "#243546",
+    "ratio": 4.99,
+    "floor": 3,
+    "pass": true
    },
    {
-    "token": "--kami-chip-ring",
-    "after": "#dcd9cb"
+    "pair": "preset OPEN: active fill step from collapsed chip",
+    "fg": "#243546",
+    "bg": "#242520",
+    "ratio": 1.23,
+    "floor": 1.02,
+    "pass": true
    },
    {
-    "token": "--kami-send-idle",
-    "after": "#1B365D"
+    "pair": "preset OPEN hover: fill step",
+    "fg": "#2c4055",
+    "bg": "#243546",
+    "ratio": 1.18,
+    "floor": 1.03,
+    "pass": true
    },
    {
-    "token": "--kami-send-idle-hover",
-    "after": "#12283f"
+    "pair": "selected item: text on selected fill",
+    "fg": "#a7c3e8",
+    "bg": "#243546",
+    "ratio": 6.94,
+    "floor": 4.5,
+    "pass": true
    },
    {
-    "token": "--kami-send-glyph",
-    "after": "#faf9f5"
+    "pair": "selected item: ring vs selected fill",
+    "fg": "#46689a",
+    "bg": "#243546",
+    "ratio": 2.22,
+    "floor": 1.6,
+    "pass": true
    },
    {
-    "token": "--kami-send-lift",
-    "after": "0 1px 2px rgba(20,20,19,.18)"
+    "pair": "selected card: strong ring vs canvas",
+    "fg": "#7ea6da",
+    "bg": "#1a1b17",
+    "ratio": 6.89,
+    "floor": 3,
+    "pass": true
    },
    {
-    "token": "--kami-send-off-fill",
-    "after": "transparent"
+    "pair": "running marker rail vs canvas",
+    "fg": "#6fa89d",
+    "bg": "#1a1b17",
+    "ratio": 6.4,
+    "floor": 2,
+    "pass": true
    },
    {
-    "token": "--kami-send-off-ring",
-    "after": "#d9d7ca"
+    "pair": "role hue sage vs canvas",
+    "fg": "#9cbb7c",
+    "bg": "#1a1b17",
+    "ratio": 8.09,
+    "floor": 4.5,
+    "pass": true
    },
    {
-    "token": "--kami-send-off-glyph",
-    "after": "#a5a294"
+    "pair": "role hue brass vs canvas",
+    "fg": "#dcab6b",
+    "bg": "#1a1b17",
+    "ratio": 8.31,
+    "floor": 4.5,
+    "pass": true
+   },
+   {
+    "pair": "role hue clay vs canvas",
+    "fg": "#e1916f",
+    "bg": "#1a1b17",
+    "ratio": 6.99,
+    "floor": 4.5,
+    "pass": true
    }
   ],
-  "verdict": "PASS — no token that can colour text changed value; text contrast is bit-identical to the committed baseline"
- },
- "captured_at": "2026-09-10 15:22",
- "verified_on": "dsh 0.1.5-rc.1"
+  "failures": []
+ }
 }
