@@ -50,5 +50,6 @@
    ]
   }
  ],
- "captured_at": "light-mode-final"
+ "captured_at": "light-mode-final",
+ "verified_on": "0.1.2-alpha.5 + re-verified on 0.1.5-rc.1 (2026-09-10), all surfaces incl. better-sidebar panel"
 }

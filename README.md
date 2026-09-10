@@ -139,7 +139,7 @@ dsh plugin --profile web add "file:/path/to/DSH-THEME-KAMI"
 
 ## 验证记录
 
-在真实运行中的 DSH WebUI（`dsh web 0.1.2-alpha.5`）中实测（2026-09-10）：
+在真实运行中的 DSH WebUI 中实测（2026-09-10，先在 `0.1.2-alpha.5`，后又在用户升级的 `0.1.5-rc.1` 上复验）：
 
 - **浅色**：正文 `#141413` 于 `#f5f4ed` 画布，对比度 16.72:1；全页对比度
   扫描 0 个违规（含错误/警告/成功状态、代码、选中态、hover 态）。
@@ -149,11 +149,14 @@ dsh plugin --profile web add "file:/path/to/DSH-THEME-KAMI"
   Charter/宋体；几何对比显示**零布局回归**（无截断、无溢出、无换行变化）。
 - **浅/深回环**：经设置 UI 在 浅色→深色→浅色 间切换后逐 token 复查，暖色
   梯形与墨蓝在所有模式下保持，无冷色回漏。
+- **better-sidebar 适配**：其覆盖式面板（`absolute` + `z-index`）的几何在
+  有无本主题时完全一致（A/B 实测）——<768px 窄窗口下插件按自身移动端逻辑
+  使用 `width:100vw` 全宽，属插件设计而非主题回归；主题负责表面层次：
+  `bg-layer-1` 从与画布同色改为 Kami ivory（浅 `#faf9f5` / 深 `#21221d`），
+  面板与对话区有清晰分界 + 发丝线边缘。
 - 截图证据：`assets/preview-{light,dark}.png`（README 顶部）、
-  `assets/verify/01-boot.png`、`02-conversation.png`、`03-settings-light.png`、
-  `04-code-light.png`、`05-code-dark.png`；量化审计
-  `assets/verify/audit-*.json`（token 采样与对比度扫描）。
-- 安装 / 启用 / 卸载只读路径验证、以及全部工程调研：见 `docs/`。
+  `assets/verify/01-boot.png` ~ `07-bettersidebar-dark.png`（设置页、代码块、
+  浅/深 better-sidebar 面板等）；量化审计 `assets/verify/audit-*.json`。
 
 ## 设计来源与许可证
 
