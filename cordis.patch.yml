@@ -1,0 +1,6 @@
+# dsh-kami-theme bundle patch: mounts the browser-only Kami skin into the
+# web profile roster. All behavior runs in the web client; the host half is
+# intentionally inert (no filesystem / network / web-server access).
+- insert:
+    - id: dsh-kami-theme
+      name: 'dsh-kami-theme'

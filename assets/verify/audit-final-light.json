@@ -1,0 +1,54 @@
+{
+ "mode": "light",
+ "bodyFg": "#141413",
+ "bodyBg": "#f5f4ed",
+ "bodyContrast": 16.72,
+ "bodyFont": "Charter",
+ "tokens": {
+  "--dsw-alias-label-primary": "#141413",
+  "--dsw-alias-label-secondary": "#3d3d3a",
+  "--dsw-alias-label-tertiary": "#504e49",
+  "--dsw-alias-label-caption": "#6b6a64",
+  "--dsw-alias-bg-base": "#f5f4ed",
+  "--dsw-alias-bg-layer-2": "#faf9f5",
+  "--dsw-alias-border-l1": "#e8e6dc",
+  "--dsw-alias-brand-primary": "#1B365D",
+  "--dsw-static-neutral-bluish-150": "#ecebe1",
+  "--dsw-static-neutral-bluish-900": "#1e1f1b",
+  "--dsw-static-deepseek-500": "#1B365D"
+ },
+ "offenderCount": 1,
+ "offenders": [
+  {
+   "text": "深度求索中...",
+   "kind": "gradient-text",
+   "worstStop": 1.21,
+   "bg": "#f5f4ed",
+   "cls": "EvIC1a_turnStatus"
+  }
+ ],
+ "gradientTextCount": 1,
+ "gradientText": [
+  {
+   "text": "深度求索中...",
+   "cls": "EvIC1a_turnStatus",
+   "bg": "#f5f4ed",
+   "stopContrasts": [
+    10.99,
+    10.99,
+    1.21,
+    10.99,
+    10.99
+   ],
+   "minStop": 1.21,
+   "stops": [
+    "#1b365d",
+    "#1b365d",
+    "#d7e0ec",
+    "#1b365d",
+    "#1b365d"
+   ]
+  }
+ ],
+ "captured_at": "light-mode-final"
+}

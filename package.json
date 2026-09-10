@@ -1,0 +1,50 @@
+{
+  "name": "dsh-kami-theme",
+  "version": "0.1.0",
+  "description": "Kami-inspired editorial theme for the DeepSeek Harness web UI — warm parchment canvas, ink-blue accent, serif typography, hairline borders. Light & dark.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "docs",
+    "assets",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "theme",
+    "skin",
+    "kami",
+    "paper",
+    "editorial",
+    "serif",
+    "parchment",
+    "ink-blue",
+    "light",
+    "dark"
+  ],
+  "license": "MIT",
+  "author": "DSH-THEME-KAMI contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quaner1234-cmd/DSH-THEME-KAMI.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  }
+}
